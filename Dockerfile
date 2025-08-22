@@ -2,6 +2,12 @@ FROM ubuntu:24.04
 
 RUN apt update
 
+RUN echo "America/Recife" > /etc/timezone
+
+RUN apt install -y python3
+
+RUN apt update
+
 RUN apt install -y \
   build-essential gcc make libc6-dev \
   libx11-dev libxt-dev \
